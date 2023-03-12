@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Capstone</title>
+        <link rel='stylesheet' type="text/css" href="/static/style.css"/>
+        <style>
+            input[type=button],
+            input[type=submit] {
+              background-color: #009879;
+              border: none;
+              color: #fff;
+              padding: 5px 10px;
+              text-decoration: none;
+              cursor: pointer;
+            }
+          </style>
+    </head>
+    <body>
+        <div class="heading">
+            <h1>Welcome to Capstone project</h1>
+            <h2>[Sentiment Based Product Recommendation System]</h2>
+        </div>
+        <div  class="form" >
+            <form method="POST">
+                <p><label>User Name: </label>
+                <input type="text" id="uname" name="uname">
+                <input class=".submit-btn" type="submit" name="submit" value="Get"/></p>
+            </form>
+        </div>
+        <div class="info">
+            <h3>{{info}}</h3>
+        </div>
+        <table class="table">
+			<tr class="table__header">
+                <th class="table__cell">Products</th>
+			</tr>
+            {% for row in data %}
+            <tr class="table__row">
+                <td class="table__cell">{{row}}</td>
+            </tr>
+            {% endfor %}            
+        </table>
+    </body>
+</html>
